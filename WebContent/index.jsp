@@ -4,10 +4,9 @@
     <head>
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     	<style>
-			  body {background-color:lightgray;}
-			  h1   {color:blue;}
-			  p    {color:darkblue;}
-			  a    {text-decoration:none;color:#4d4d4d;}
+			  body {background-color:lightgray}
+			  h1   {color:blue}
+			  p    {color:darkblue}
 		</style>
         <title>Fit Hits</title>
     </head>
