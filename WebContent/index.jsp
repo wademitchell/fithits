@@ -4,13 +4,18 @@
     <head>
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     	<style>
-			  body {background-color:lightgray}
-			  h1   {color:blue}
-			  p    {color:darkblue}
+			  body {background-color:lightgrey}
+			  #wrapper {
+				  max-width: 768px;
+				  margin: 10% auto;
+				  padding; 20% 20%;
+				  background: lightgrey
+			}
 		</style>
         <title>Fit Hits</title>
     </head>
     <body>
+    	<div id = "wrapper">
         <h1>Fit Hits</h1>
         <p>Enter the name of an Artist or Band you like and Fit Hits will play similar music for your workout.</p>
         <form action = "artist" method = "post">
@@ -26,5 +31,6 @@
     </body>
     <footer>
     Powered by <a href="http://the.echonest.com">The Echo Nest</a> and <a href="http://spotify.com">Spotify</a>. © Fit Hits 2014
+    </div>
     </footer>
 </html>
