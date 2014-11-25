@@ -8,7 +8,7 @@
 			  #wrapper {
 				  max-width: 768px;
 				  margin: 10% auto;
-				  padding; 20% 20%;
+				  padding; 10% 20%;
 				  background: lightgrey
 			}
 		</style>
@@ -20,7 +20,7 @@
         <p>Enter the name of an Artist or Band you like and Fit Hits will play similar music for your workout.</p>
         <form action = "artist" method = "post">
             <label for = "artist">Artist:</label>
-            <input type = "text" id = "artist" name = "artist"></input>
+            <input type = "text" id = "artist" name = "artist" size = 40></input>
             <br />
             <br />
             <input type = "submit" value = "Submit"/>
