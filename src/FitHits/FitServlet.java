@@ -42,19 +42,6 @@ public class FitServlet extends HttpServlet {
 		
 		response.getWriter().write("Get pumped with FitHits");
 		
-		String s = request.getParameter("fitServlet");
-		
-		URL url = new URL("http://www.omdbapi.com/?s="+ s);
-
-		ObjectMapper mapper = new ObjectMapper();
-
-		Map<String, Object> map = mapper.readValue(url, Map.class);
-
-		List list = (List)map.get("Search");
-
-		request.setAttribute("list", list);
-		request.getRequestDispatcher("/results.jsp").forward(request, response);
-		
 	}
 	
 	public static void main() {
