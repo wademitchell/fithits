@@ -15,27 +15,16 @@
         <title>Fit Hits</title>
     </head>
     <body>
-    	<div id = "wrapper">
+    	<div id="wrapper">
         <h1>Fit Hits</h1>
         <p>Enter the name of an Artist or Band you like and Fit Hits will play similar music for your workout.</p>     
         <form action="FitServlet" method="GET">
-  		Artist: <input type="search" id="searchArtist" name="FitServlet"><br>
+  		Artist: <input type="search" id="searchArtist" name="fitServlet"><br>
   		<input type="submit" value="Generate Playlist">
 		</form>
-		
-		<form action = "artist" method = "post">
-            <label for = "artist">Artist:</label>
-            <input type = "text" id = "artist" name = "artist" size = 40></input>
-            <br />
-            <br />
-            <input type = "submit" value = "Submit"/>
-            <br />
-            <br />
-        </form>
-        
+        </div>
     </body>
     <footer>
     Powered by <a href="http://the.echonest.com">The Echo Nest</a> and <a href="http://spotify.com">Spotify</a>. © Fit Hits 2014
-    </div>
     </footer>
 </html>

@@ -1,11 +1,23 @@
 package FitHits;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.List;
+import java.util.Map;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import FitHits.Artist;
+import FitHits.EchoNestAPI;
+import FitHits.EchoNestException;
+import FitHits.Params;
+
 
 /**
  * Servlet implementation class FitServlet
@@ -30,7 +42,36 @@ public class FitServlet extends HttpServlet {
 		
 		response.getWriter().write("Get pumped with FitHits");
 		
+		String s = request.getParameter("fitServlet");
+		
+		URL url = new URL("http://www.omdbapi.com/?s="+ s);
+
+		ObjectMapper mapper = new ObjectMapper();
+
+		Map<String, Object> map = mapper.readValue(url, Map.class);
+
+		List list = (List)map.get("Search");
+
+		request.setAttribute("list", list);
+		request.getRequestDispatcher("/results.jsp").forward(request, response);
+		
 	}
+	
+	public static void main() {
+		String s = request.getParameter("fitServlet");
+		
+        EchoNestAPI echoNest = new EchoNestAPI(R5RSCKQLGLGGF08YB);
+        List<Artist> artists = echoNest.searchArtists(s);
+
+        if (artists.size() > 0) {
+            Artist s = artists.get(0);
+            System.out.println("Similar artists for " + s.getName());
+            for (Artist simArtist : s.getSimilar(10)) {
+                out.println(s + simArtist.getName());
+            }
+        }
+    }
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
