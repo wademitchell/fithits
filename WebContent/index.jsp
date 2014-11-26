@@ -17,8 +17,13 @@
     <body>
     	<div id = "wrapper">
         <h1>Fit Hits</h1>
-        <p>Enter the name of an Artist or Band you like and Fit Hits will play similar music for your workout.</p>
-        <form action = "artist" method = "post">
+        <p>Enter the name of an Artist or Band you like and Fit Hits will play similar music for your workout.</p>     
+        <form action="FitServlet" method="GET">
+  		Artist: <input type="search" id="searchArtist" name="FitServlet"><br>
+  		<input type="submit" value="Generate Playlist">
+		</form>
+		
+		<form action = "artist" method = "post">
             <label for = "artist">Artist:</label>
             <input type = "text" id = "artist" name = "artist" size = 40></input>
             <br />
