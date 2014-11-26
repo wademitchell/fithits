@@ -1,4 +1,6 @@
-package FitHits;
+package com.echonest.api.v4;
+
+
 
 /**
  * Represents echo nest oriented exceptions

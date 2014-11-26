@@ -1,11 +1,17 @@
-package FitHits;
+package com.echonest.api.v4;
 
-import FitHits.MQuery;
+import com.echonest.api.v4.util.MQuery;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Represents and Echo Nest Artist
+ * 
+ * @author plamere
+ * 
+ */
 public class Artist extends ENItem {
     private final static String PATH = "artist";
     private final static String TYPE = "artist";

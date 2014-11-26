@@ -1,10 +1,10 @@
-package FitHits;
+package com.echonest.api.v4;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import FitHits.Commander;
+import com.echonest.api.v4.util.Commander;
 
 public class Track extends ENItem {
 

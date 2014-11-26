@@ -1,9 +1,9 @@
-package FitHits;
+package com.echonest.api.v4;
 
-import FitHits.Track.AnalysisStatus;
-import FitHits.Commander;
-import FitHits.MQuery;
-import FitHits.Utilities;
+import com.echonest.api.v4.Track.AnalysisStatus;
+import com.echonest.api.v4.util.Commander;
+import com.echonest.api.v4.util.MQuery;
+import com.echonest.api.v4.util.Utilities;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -12,6 +12,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The main interface to the Echo Nest API
+ *
+ * @author plamere
+ *
+ */
 public class EchoNestAPI {
 
     private Commander cmd = new Commander("EchoNestAPI");
@@ -51,8 +57,8 @@ public class EchoNestAPI {
      *
      * @param apiKey the developer api key
      */
-    public EchoNestAPI(String R5RSCKQLGLGGF08YB) {
-        stdParams.add("api_key", R5RSCKQLGLGGF08YB);
+    public EchoNestAPI(String apiKey) {
+        stdParams.add("api_key", apiKey);
         cmd.setStandardParams(stdParams);
     }
 
