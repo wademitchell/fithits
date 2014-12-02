@@ -45,7 +45,7 @@ public class FitServlet extends HttpServlet {
 	}
 	
 	public static void main() {
-		String s = request.getParameter("fitServlet");
+		String s = request.getParameter("FitServlet");
 		
         EchoNestAPI echoNest = new EchoNestAPI(R5RSCKQLGLGGF08YB);
         List<Artist> artists = echoNest.searchArtists(s);
